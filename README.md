@@ -1,10 +1,30 @@
-# Projekt Kompresji i Analizy Ruchu w Wideo
+# Video Compression and Motion Analysis Project
 
-## Opis Projektu
+## Project Description
 
-Ten projekt demonstracyjny pokazuje, jak kompresować i dekompresować pojedyncze klatki wideo oraz analizować ruch w czasie rzeczywistym za pomocą optycznego przepływu. Projekt składa się z następujących kroków:
+This demonstration project shows how to compress and decompress individual video frames and analyze motion in real-time using optical flow. The project consists of the following steps:
 
-1. **Podział obrazu na bloki:** Obraz jest dzielony na mniejsze bloki o rozmiarze 8x8 pikseli.
-2. **Kompresja:** Każdy blok jest poddawany dyskretnej transformacie kosinusowej (DCT), kwantyzowany, a następnie kodowany przy użyciu kodowania RLE (Run-Length Encoding).
-3. **Dekompresja:** Skompresowane bloki są dekodowane, dekwantyzowane i poddawane odwrotnej transformacie kosinusowej (IDCT), aby zrekonstruować oryginalny obraz.
-4. **Analiza ruchu:** Optyczny przepływ między kolejnymi klatkami wideo jest obliczany, co pozwala na wizualizację ruchu w czasie rzeczywistym.
+1. **Image Division into Blocks:** The image is divided into smaller blocks of 8x8 pixels.
+2. **Compression:** Each block undergoes Discrete Cosine Transform (DCT), quantization, and is then encoded using Run-Length Encoding (RLE).
+3. **Decompression:** Compressed blocks are decoded, dequantized, and subjected to Inverse Discrete Cosine Transform (IDCT) to reconstruct the original image.
+4. **Motion Analysis:** Optical flow between consecutive video frames is calculated, allowing for real-time motion visualization.
+
+## Running the Project
+
+To run the project, follow these steps:
+
+1. Ensure that the camera is connected to the computer.
+2. Run the `main.py` script:
+    ```bash
+    python main.py
+    ```
+
+## Requirements
+
+- Python 3.x
+- Libraries: numpy, opencv-python
+
+## Repository Contents
+
+- `main.py`: The main part of the program.
+- `compression.py`: Module with compression and decompression functions.
